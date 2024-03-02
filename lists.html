@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/primary.css">
     <link rel="stylesheet" href="styles/library.css">
-    <script src="script.js"></script>
     <title>Admin Site</title>
 </head>
 <body>
@@ -31,15 +30,50 @@
                     <h1 class="no-padding">Carson Keilitz</h1>
                 </div>
                 <div class="resturant-adder">
-                    <button>Add Resturant</button>
-                    <dialog>
-                        <form action="addresturant.php" method="post">
-                            <input type="text" name="resturant-name" placeholder="Resturant Name">
-                            <input type="text" name="resturant-location" placeholder="Resturant Location">
-                            <input type="text" name="resturant-type" placeholder="Resturant Type">
-                            <input type="text" name="resturant-description" placeholder="Resturant Description">
-                            <input type="checkbox" name="visted" value="visted">
-                            <button type="submit" name="submit-resturant">Add Resturant</button>
+                    <button class="resturant-button">Add Resturant</button>
+                    <dialog class="dialog">
+                        <form action="#" method="dialog">
+                            <div>
+                                <label for="restaurant_name">Restaurant Name:</label>
+                                <input type="text" id="restaurant_name" name="restaurant_name" required>
+                            </div>
+                            <div>
+                                <label for="food_type">Type of Food:</label>
+                                <select id="food_type" name="food_type" required>
+                                    <option value="">Select Food Type</option>
+                                    <option value="American">American</option>
+                                    <option value="Chinese">Chinese</option>
+                                    <option value="Cuban">Cuban</option>
+                                    <option value="Greek">Greek</option>
+                                    <option value="Indian">Indian</option>
+                                    <option value="Italian">Italian</option>
+                                    <option value="Japanese">Japanese</option>
+                                    <option value="Korean">Korean</option>
+                                    <option value="Mexican">Mexican</option>
+                                    <option value="Thai">Thai</option>
+                                    <option value="Vietnamese">Vietnamese</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="location">Location:</label>
+                                <input type="text" id="location" name="location" required>
+                            </div>
+                            <div>
+                                <label for="rating">Rating (1-10):</label>
+                                <input type="number" id="rating" name="rating" min="1" max="10" required>
+                            </div>
+                            <div>
+                                <label for="visited">Visited:</label>
+                                <input type="radio" id="yes" name="visited" value="Yes">
+                                <label for="yes">Yes</label>
+                                <input type="radio" id="want_to" name="visited" value="Want to">
+                                <label for="want_to">Want to</label>
+                                <input type="radio" id="no" name="visited" value="No">
+                                <label for="no">No</label>
+                            </div>
+                            <div>
+                                <button type="submit" id="js-close" value="js-close">Submit</button>
+                            </div>
                         </form>
                     </dialog>
                 </div>
@@ -201,5 +235,6 @@
             </div> -->
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

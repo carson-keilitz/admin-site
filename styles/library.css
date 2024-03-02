@@ -259,3 +259,51 @@ h1, h2, h3, h4 {
 .card-image {
     height: 30px;
 }
+
+
+/* New Section */
+
+/* Animating the dialog */
+
+/*   Open state of the dialog  */
+    dialog[open] {
+    opacity: 1;
+    transform: scaleY(1);
+    transition:
+      opacity 0.7s ease-in,
+      transform 0.7s ease-in,
+      overlay 0.7s ease-in allow-discrete,
+      display 0.7s ease-in allow-discrete;
+  }
+  
+  /*   Closed state of the dialog   */
+  dialog {
+    opacity: 0;
+    transform: scaleY(0);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s ease-out,
+      overlay 0.7s ease-out allow-discrete,
+      display 0.7s ease-out allow-discrete;
+    /* Equivalent to
+    transition: all 0.7s allow-discrete; */
+  }
+  
+  /*   Before-open state  */
+    dialog:not([open]) {
+        display: none;
+    }
+  /* Transition the :backdrop when the dialog modal is promoted to the top layer */
+  dialog::backdrop {
+    background-color: rgb(0 0 0 / 0%);
+    transition:
+      display 0.7s allow-discrete,
+      overlay 0.7s allow-discrete,
+      background-color 0.7s;
+    /* Equivalent to
+    transition: all 0.7s allow-discrete; */
+  }
+  
+  dialog[open]::backdrop {
+    background-color: rgb(0 0 0 / 25%);
+  }
