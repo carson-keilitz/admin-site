@@ -1,0 +1,261 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1, h2, h3, h4 {
+    padding: 0;
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0; /* Set your desired background color */
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 5fr;
+}
+
+.sidebar {
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: #04BF9D;
+}
+
+.header {
+    background-color: white;
+}
+
+.main-content {
+    background-color: whitesmoke; /* Set your desired background color */
+}
+
+.other {
+    flex: 1;
+}
+
+.card-padding {
+    padding: 15px;
+}
+
+.extra {
+    padding-left: 15px;
+    display: flex;
+    justify-content: start;
+    align-content: end;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.project-font {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px 20px 0px 20px;
+    margin-bottom: 5px;
+}
+
+.upperheader {
+    flex: 1;
+    display: flex;
+}
+.search {
+    flex:1;
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+.search-bar {
+    flex:1;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    border: none;
+}
+
+.submit {
+    background-color: white;
+    border: none;
+}
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.search-icon-info {
+    width: 30px;
+    height: 30px;
+}
+
+.header-upper-info {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.lowerheader {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+}
+
+.resturant-adder {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+}
+
+.logo {
+    width: 75px; /* Set the width of the image */
+    height: 75px; /* Set the height of the image */
+    border-radius: 50%; /* Make the border-radius 50% to create a circle */
+    object-fit: cover;
+    margin: 10px;
+}
+
+.small-logo {
+    width:50px;
+    height: 50px;
+    margin: 0;
+}
+
+.sidebar-title {
+    align-self:start;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+/* SideBar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.Dashboard {
+    font-size: 25px;
+    color: white;
+}
+
+.dashbar-logo {
+    width: 30px;
+}
+
+.change-color {
+    fill: white;
+}
+
+.side-bar-options {
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr;
+    gap: 10px;
+}
+
+.sidebar-fonts {
+    list-style: none;
+    padding: 0px;
+    margin-left: 5px;
+}
+
+.settings {
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.sidebar-logos {
+    display: flex;
+    gap: 10px;
+}
+
+.sidebar-fonts a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sidebar-fonts svg {
+    fill: white;
+    width: 20px;
+}
+
+/* Main Content Page */
+.basic-card-template {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    margin: 10px;
+}
+
+
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+
+/* Resturant Card Section */
+.resturants {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    flex: 1;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    grid-template: repeat(auto-fit, minmax(100px, 1fr)) / repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-left-color: #BF665E;
+    border-left-width: 8px;
+    border-left-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.card-text {
+    flex: 1;
+    margin-top: 10px;
+}
+
+.card-image {
+    height: 30px;
+}

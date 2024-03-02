@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/primary.css">
+    <link rel="stylesheet" href="styles/library.css">
+    <script src="script.js"></script>
     <title>Admin Site</title>
 </head>
 <body>
@@ -27,6 +29,19 @@
                 <div class="lowerheader-text">
                     <h3 class="no-padding">Hi there,</h3>
                     <h1 class="no-padding">Carson Keilitz</h1>
+                </div>
+                <div class="resturant-adder">
+                    <button>Add Resturant</button>
+                    <dialog>
+                        <form action="addresturant.php" method="post">
+                            <input type="text" name="resturant-name" placeholder="Resturant Name">
+                            <input type="text" name="resturant-location" placeholder="Resturant Location">
+                            <input type="text" name="resturant-type" placeholder="Resturant Type">
+                            <input type="text" name="resturant-description" placeholder="Resturant Description">
+                            <input type="checkbox" name="visted" value="visted">
+                            <button type="submit" name="submit-resturant">Add Resturant</button>
+                        </form>
+                    </dialog>
                 </div>
             </div>
         </div>
@@ -143,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <div class="other">
+            <!-- <div class="other">
                 <h2 class="main-content-title project-font extra">New</h2>
                     <div class="newcards basic-card-template card-padding">
                         <div class="newcard">
@@ -183,7 +198,7 @@
                             </div>
                         </div>
                     </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>
