@@ -9,6 +9,11 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 
+/* Fonts */
+
+
+
+
 .no-padding {
     padding: 0px;
     margin: 0px;
@@ -49,7 +54,7 @@ h1, h2, h3, h4 {
     justify-content: start;
     align-content: end;
     padding-bottom: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .project-font {
@@ -224,22 +229,22 @@ h1, h2, h3, h4 {
 .cards {
     flex: 1;
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-    grid-template: repeat(auto-fit, minmax(100px, 1fr)) / repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-auto-rows: 300px; */
+    /* grid-template: repeat(auto-fit, minmax(100px, 1fr)) / repeat(auto-fit, minmax(300px, 1fr)); */
     gap: 10px;
 }
 
 .card {
+    height: 300px;
     background-color: white;
-    margin: 10px;
-    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    /* overflow: hidden; */
     border-left-color: #BF665E;
     border-left-width: 8px;
     border-left-style: solid;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
@@ -265,45 +270,72 @@ h1, h2, h3, h4 {
 
 /* Animating the dialog */
 
-/*   Open state of the dialog  */
-    dialog[open] {
-    opacity: 1;
-    transform: scaleY(1);
-    transition:
-      opacity 0.7s ease-in,
-      transform 0.7s ease-in,
-      overlay 0.7s ease-in allow-discrete,
-      display 0.7s ease-in allow-discrete;
-  }
-  
-  /*   Closed state of the dialog   */
-  dialog {
+.dialog {
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    color: #222;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+label {
+    display: block;
+}
+
+input[type="radio"] + label {
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 0;;
+}
+
+.dialog > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+    height: 400px;
+}
+
+.dialog > form > div {
+    flex: 1;
+}
+
+.dialog::backdrop {
+    background: rgb(0 0 0 / 0.5);
     opacity: 0;
-    transform: scaleY(0);
-    transition:
-      opacity 0.7s ease-out,
-      transform 0.7s ease-out,
-      overlay 0.7s ease-out allow-discrete,
-      display 0.7s ease-out allow-discrete;
-    /* Equivalent to
-    transition: all 0.7s allow-discrete; */
   }
-  
-  /*   Before-open state  */
-    dialog:not([open]) {
-        display: none;
+
+.diaglog[open] {
+    animation: fade-in 500ms forwards;
+  }
+
+.dialog[open]::backdrop {
+    animation: fade-in 500ms forwards;
+ }
+
+.dialog[closing] {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    animation: fade-out 500ms forwards;
+  }
+
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
     }
-  /* Transition the :backdrop when the dialog modal is promoted to the top layer */
-  dialog::backdrop {
-    background-color: rgb(0 0 0 / 0%);
-    transition:
-      display 0.7s allow-discrete,
-      overlay 0.7s allow-discrete,
-      background-color 0.7s;
-    /* Equivalent to
-    transition: all 0.7s allow-discrete; */
-  }
-  
-  dialog[open]::backdrop {
-    background-color: rgb(0 0 0 / 25%);
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }

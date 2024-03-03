@@ -31,15 +31,18 @@
                 </div>
                 <div class="resturant-adder">
                     <button class="resturant-button">Add Resturant</button>
-                    <dialog class="dialog">
+                    <dialog class="dialog" id="dialog">
                         <form action="#" method="dialog">
                             <div>
-                                <label for="restaurant_name">Restaurant Name:</label>
-                                <input type="text" id="restaurant_name" name="restaurant_name" required>
+                                <h2>Add A Resturant</h2>
                             </div>
                             <div>
-                                <label for="food_type">Type of Food:</label>
-                                <select id="food_type" name="food_type" required>
+                                <label for="restaurant-name">Restaurant Name:</label>
+                                <input type="text" id="restaurant-name" name="restaurant-name" required>
+                            </div>
+                            <div>
+                                <label for="food-type">Type of Food:</label>
+                                <select id="food-type" name="food-type" required>
                                     <option value="">Select Food Type</option>
                                     <option value="American">American</option>
                                     <option value="Chinese">Chinese</option>
@@ -62,7 +65,7 @@
                                 <label for="rating">Rating (1-10):</label>
                                 <input type="number" id="rating" name="rating" min="1" max="10" required>
                             </div>
-                            <div>
+                            <div class="options">
                                 <label for="visited">Visited:</label>
                                 <input type="radio" id="yes" name="visited" value="Yes">
                                 <label for="yes">Yes</label>
@@ -72,7 +75,8 @@
                                 <label for="no">No</label>
                             </div>
                             <div>
-                                <button type="submit" id="js-close" value="js-close">Submit</button>
+                                <button type="submit" id="js-submit" value="js-submit">Submit</button>
+                                <button type="button" id="js-close" value="js-close">Close</button>
                             </div>
                         </form>
                     </dialog>
@@ -92,7 +96,7 @@
                     <li><a classhref="index.html">Home</a></li>
                 </div>
                 <div class="sidebar-logos">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>face-man-profile</title><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,8.39C13.57,9.4 15.42,10 17.42,10C18.2,10 18.95,9.91 19.67,9.74C19.88,10.45 20,11.21 20,12C20,16.41 16.41,20 12,20C9,20 6.39,18.34 5,15.89L6.75,14V13A1.25,1.25 0 0,1 8,11.75A1.25,1.25 0 0,1 9.25,13V14H12M16,11.75A1.25,1.25 0 0,0 14.75,13A1.25,1.25 0 0,0 16,14.25A1.25,1.25 0 0,0 17.25,13A1.25,1.25 0 0,0 16,11.75Z" /></svg>                    <li><a href="about.html">Profile</a></li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>face-man-profile</title><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,8.39C13.57,9.4 15.42,10 17.42,10C18.2,10 18.95,9.91 19.67,9.74C19.88,10.45 20,11.21 20,12C20,16.41 16.41,20 12,20C9,20 6.39,18.34 5,15.89L6.75,14V13A1.25,1.25 0 0,1 8,11.75A1.25,1.25 0 0,1 9.25,13V14H12M16,11.75A1.25,1.25 0 0,0 14.75,13A1.25,1.25 0 0,0 16,14.25A1.25,1.25 0 0,0 17.25,13A1.25,1.25 0 0,0 16,11.75Z" /></svg>                    <li><a href="index.html">Profile</a></li>
                 </div>
                 <div class="sidebar-logos">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>email-outline</title><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg>                    <li><a href="contact.html">Messages</a></li>
@@ -101,7 +105,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>history</title><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg>                    <li><a href="contact.html">History</a></li>
                 </div>
                 <div class="sidebar-logos">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>format-list-bulleted</title><path d="M7,5H21V7H7V5M7,13V11H21V13H7M4,4.5A1.5,1.5 0 0,1 5.5,6A1.5,1.5 0 0,1 4,7.5A1.5,1.5 0 0,1 2.5,6A1.5,1.5 0 0,1 4,4.5M4,10.5A1.5,1.5 0 0,1 5.5,12A1.5,1.5 0 0,1 4,13.5A1.5,1.5 0 0,1 2.5,12A1.5,1.5 0 0,1 4,10.5M7,19V17H21V19H7M4,16.5A1.5,1.5 0 0,1 5.5,18A1.5,1.5 0 0,1 4,19.5A1.5,1.5 0 0,1 2.5,18A1.5,1.5 0 0,1 4,16.5Z" /></svg>                    <li><a href="contact.html">Your Lists</a></li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>format-list-bulleted</title><path d="M7,5H21V7H7V5M7,13V11H21V13H7M4,4.5A1.5,1.5 0 0,1 5.5,6A1.5,1.5 0 0,1 4,7.5A1.5,1.5 0 0,1 2.5,6A1.5,1.5 0 0,1 4,4.5M4,10.5A1.5,1.5 0 0,1 5.5,12A1.5,1.5 0 0,1 4,13.5A1.5,1.5 0 0,1 2.5,12A1.5,1.5 0 0,1 4,10.5M7,19V17H21V19H7M4,16.5A1.5,1.5 0 0,1 5.5,18A1.5,1.5 0 0,1 4,19.5A1.5,1.5 0 0,1 2.5,18A1.5,1.5 0 0,1 4,16.5Z" /></svg>                    <li><a href="lists.html">Your Lists</a></li>
                 </div>
                 <div class="sidebar-logos">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account-group</title><path d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" /></svg>                    <li><a href="contact.html">Community</a></li>
@@ -127,6 +131,18 @@
                     <div class="card">
                         <div class="card-title project-font">Aventura</div>
                         <div class="card-text">
+                            Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.
+                        </div>
+                        <div class="card-food-type">
+                            Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.
+                        </div>
+                        <div class="card-location">
+                            Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.
+                        </div>
+                        <div class="rating">
+                            Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.
+                        </div>
+                        <div class="visted">
                             Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.
                         </div>
                         <div class="card-footer">
