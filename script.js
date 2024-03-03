@@ -24,12 +24,28 @@ function addBookToLibrary() {
         }
     }
     myLibrary.push(newBook);
+    const cards = document.querySelector(".cards");
+    cards.innerHTML = "";
+    let card = document.createElement("div");
+    card.classList.add("card");
+    card.innerHTML
+
+    for (book in myLibrary) {
+        let card = document.createElement("div");
+        card.classList.add("card");
+
+        
+
+
+        cards.appendChild(card);
+    }
+
+
+
+
+    
     console.log(myLibrary);
     return true;
-}
-
-function render() {
-  // do stuff here
 }
 
 
