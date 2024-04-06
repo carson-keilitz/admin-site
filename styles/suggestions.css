@@ -1,0 +1,42 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.main-content-header {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.option-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#resturant-button-container {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    width: 100%;
+    gap:50px;
+    justify-content: center;
+    grid-template-rows: 150px;
+    grid-auto-rows: 150px;
+}
+
+.rest-button {
+    background-color: #1064E2;
+    border-radius: 20px;
+    font-size: 4em;
+    font-weight: strong;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
