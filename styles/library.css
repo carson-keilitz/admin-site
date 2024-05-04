@@ -1,3 +1,34 @@
+/* Styles for the library page */
+.card-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  word-wrap: break-word; /* To ensure long words wrap */
+}
+
+.card-options * {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  word-wrap: break-word;
+  /* Content centered */
+  /* Allow content to wrap */
+}
+
+/* Styling Library Button */
+.resturant-button {
+  background-color: #BF665E;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /* Animating the dialog */
 
 .dialog {
